@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Messages</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="bold_lbl">Online</ion-label>
+        <div class="user_slider">
+            <div class="round_image" *ngFor="let item of userList" [style.backgroundImage]="'url('+ item.img +')'"></div>
+        </div>
+        <ion-label class="bold_lbl">Messages</ion-label>
+        <div class="msg_list">
+            <div class="single_msg" *ngFor="let item of userList" (click)="goToMessage()">
+                <div class="back_user" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+                    <ion-label class="msg_lbl">{{item.msg}}</ion-label>
+                </div>
+                <ion-label class="time_lbl">{{item.time}}</ion-label>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dating App Template By Initappz</string>
+    <string name="title_activity_main">Dating App Template By Initappz</string>
+    <string name="package_name">io.capacitor.dating.initappz</string>
+    <string name="custom_url_scheme">io.capacitor.dating.initappz</string>
+</resources>

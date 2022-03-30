@@ -1,0 +1,24 @@
+<ion-content>
+    <div class="main_content_div">
+        <ion-slides #mySlider [options]="slideOpts">
+            <ion-slide *ngFor="let item of sliderImages">
+                <div class="back_image" [style.backgroundImage]="'url('+ item +')'">
+                    <div class="overlay" (click)="goToPersonProfile()"></div>
+                    <div class="content_div">
+                        <ion-label class="name_lbl">Nicole, 24</ion-label>
+                        <ion-label class="small_lbl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</ion-label>
+                        <div class="action_box">
+                            <div class="white_box" (click)="goToNext()">
+                                <ion-icon class="close" name="close"></ion-icon>
+                            </div>
+                            <ion-icon class="chat_icn" name="paper-plane" (click)="goToMessages()"></ion-icon>
+                            <div class="white_box" (click)="goToNext()">
+                                <ion-icon class="heart" name="heart"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>

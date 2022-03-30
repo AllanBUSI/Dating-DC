@@ -1,0 +1,53 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="pink_div">
+            <div class="action_btn" (click)="isEdit = !isEdit">
+                <ion-icon name="checkmark" *ngIf="isEdit === false"></ion-icon>
+                <ion-icon name="pencil-sharp" *ngIf="isEdit === true"></ion-icon>
+            </div>
+            <div class="image_back" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+        </div>
+        <div class="white_div">
+            <ion-label class="name_lbl">Mausam</ion-label>
+
+            <div class="flex_div">
+                <ion-label>Name</ion-label>
+                <ion-input placeholder="Name" [(ngModel)]="name" [disabled]="isEdit"></ion-input>
+            </div>
+            <div class="flex_div">
+                <ion-label>Gender</ion-label>
+                <ion-select placeholder="Gender" [(ngModel)]="gender" [disabled]="isEdit">
+                    <ion-select-option value="Male">Male</ion-select-option>
+                    <ion-select-option value="Female">Female</ion-select-option>
+                </ion-select>
+            </div>
+            <div class="flex_div">
+                <ion-label>Birth Date</ion-label>
+                <ion-datetime display-format="DD/MM/YYYY" placeholder="Birth Date" [(ngModel)]="birthDate" [disabled]="isEdit"></ion-datetime>
+            </div>
+            <div class="flex_div">
+                <ion-label>Height</ion-label>
+                <ion-input placeholder="Height" [(ngModel)]="height" [disabled]="isEdit"></ion-input>
+            </div>
+            <div class="flex_div">
+                <ion-label>Graduate</ion-label>
+                <ion-input placeholder="Location" [(ngModel)]="gradation" [disabled]="isEdit"></ion-input>
+            </div>
+            <div class="flex_div">
+                <ion-label>Religion</ion-label>
+                <ion-input placeholder="Religion" [(ngModel)]="religion" [disabled]="isEdit"></ion-input>
+            </div>
+            <div class="flex_div">
+                <ion-label>City</ion-label>
+                <ion-input placeholder="City" [(ngModel)]="city" [disabled]="isEdit"></ion-input>
+            </div>
+            <div class="about_div">
+                <ion-label>About</ion-label>
+                <ion-textarea placeholder="Write something here.." autoGrow="true" [disabled]="isEdit" [(ngModel)]="about">
+
+                </ion-textarea>
+            </div>
+
+        </div>
+    </div>
+</ion-content>
